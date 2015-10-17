@@ -53,5 +53,7 @@ group :development, :test do
   group :development, :test do  
   gem 'rails_admin'
   end
+  gem "will_paginate","3.0.7"
+  gem "bootstrap-will_paginate","0.0.10"
 end
 
