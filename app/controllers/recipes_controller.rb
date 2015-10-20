@@ -6,6 +6,7 @@ class RecipesController < ApplicationController
 
     def show
         @recipe = Recipe.find(params[:id])
+        @chef = @recipe.chef
     end
 
     def new
@@ -14,7 +15,7 @@ class RecipesController < ApplicationController
 
     def create
         @recipe = Recipe.new(recipe_params)
-        @recipe.chef = Chef.find(1)
+        @recipe.chef = Chef.find(session[:chef_id])
 
         if @recipe.save
             flash[:success] = "Your recipe was created successfully!"
@@ -38,11 +39,11 @@ class RecipesController < ApplicationController
             render :edit
         end
     end
-    
+
     def like
         @recipe = Recipe.find(params[:id])
         like = Like.create(like: params[:like] ,recipe: @recipe, chef: Chef.first)
-        @recipe.like = 0 
+        @recipe.like = 0
         if like.valid?
             flash[:success] = "You selection was successfull!"
             redirect_to :back

@@ -1,24 +1,15 @@
+chefs:
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+What we hava already:
+-Chef model and validations
+-chefs table with columns chefname and email
 
 
-Welcome to your Rails project on Cloud9 IDE!
-
-To get started, just do the following:
-
-1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
-2. Preview your new app by clicking on the URL that appears in the Run panel below (https://udemy-sakanakunn.c9.io/).
-
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+What we need to do:
+-Add passwords to thechefs table,so chefs can be authenticted and lgged in
+-Use email as log in credentials, sinxe email is unique
+-Ability to register new chefs to use the app
+-Ability to display chefsprofile
+-Ability to list chefs using the app
+-Restrict actions like create recipe,edit recipe and like feature to loged in chefs only
+-Restrictiong edit of recipes by chefs who created the recipes
